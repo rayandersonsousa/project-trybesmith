@@ -12,6 +12,12 @@ class ProductsService {
   public async registerNewProduct(product: IProducts) {
     return this.model.registerNewProduct(product);
   }
+
+  public async getAll() {
+    const products = await this.model.getAll();
+
+    return products;
+  }
 }
 
 export default ProductsService;
